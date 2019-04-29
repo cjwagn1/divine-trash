@@ -1,47 +1,7 @@
-// import React, { Component } from 'react';
-// import fire from './fire';
-//
-// class App extends Component {
-//
-//
-//   constructor(props) {
-//     super(props);
-//     this.state = { messages: [] }; // <- set up react state
-//   }
-//   componentWillMount(){
-//     /* Create reference to messages in Firebase Database */
-//     let messagesRef = fire.database().ref('messages').orderByKey().limitToLast(100);
-//     messagesRef.on('child_added', snapshot => {
-//       /* Update React state when message is added at Firebase Database */
-//       let message = { text: snapshot.val(), id: snapshot.key };
-//       this.setState({ messages: [message].concat(this.state.messages) });
-//     })
-//   }
-//   addMessage(e){
-//     e.preventDefault(); // <- prevent form submit from reloading the page
-//     /* Send the message to Firebase */
-//     fire.database().ref('messages').push( this.inputEl.value );
-//     this.inputEl.value = ''; // <- clear the input
-//   }
-//   render() {
-//     return (
-//       <form onSubmit={this.addMessage.bind(this)}>
-//         <input type="text" ref={ el => this.inputEl = el }/>
-//         <input type="submit"/>
-//         <ol>
-//           { /* Render the list of messages */
-//             this.state.messages.map( message => <li key={message.id}>{message.text}</li> )
-//           }
-//         </ol>
-//       </form>
-//     );
-//   }
-// }
-//
-// export default App;
-
 import React, { Component } from 'react';
 import fire from './fire';
+import './App.css';
+import logo from './logo.png';
 
 class App extends Component {
   constructor(props) {
@@ -78,34 +38,48 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+    <div class = "back">
+     <header>
+     <h2 class = "align">Divine Trash</h2>
+      <img src = {logo} className="App-logo" />
+      <img src = {logo} className="App-logo2" />
+
+     </header>
+      <div class = "test">
         <form onSubmit={this.addPost.bind(this)} id="PostForm">
           <div>
-            <label>Title</label>
+            <label> Title: </label>
             <input type="text" id="title-input"/>
           </div>
           <div>
-            <label>Location</label>
+          <br />
+            <label> Location: </label>
             <input type="text" id="location-input"/>
           </div>
           <div>
-            <label>Estimated Time</label>
+          <br />
+            <label>  Estimated Time: </label>
             <input type="text" id="Estimated-input"/>
           </div>
           <div>
-            <label>Notes</label>
+          <br />
+            <label >Notes: </label>
             <input type="text" id="Note-input"/>
           </div>
           <div>
+          <br />
             <input type="submit"/>
           </div>
           <ul>
             { /* Render the list of post */
-               this.state.posts.map( post => <li key={post.id}>{post.title}</li> )
+               this.state.posts.map( post => <li key={post.id}>{post.text.title}, {post.text.location}, {post.text.time}, {post.text.noteField}</li> )
+
+
             }
           </ul>
         </form>
       </div>
+    </div>
     );
   }
 }

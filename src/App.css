@@ -2,15 +2,57 @@
   text-align: center;
 }
 .test{
-  background-color: black;
+  background-color: gray;
+  height: auto;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
 
 
 }
+.back{
+  background-color: silver;
 
+
+}
+.navbar {
+     margin-bottom: 0;
+     border-radius: 0;
+   }
+
+   /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+   .row.content {height: 450px}
+
+   /* Set gray background color and 100% height */
+   .sidenav {
+     padding-top: 20px;
+     background-color: #f1f1f1;
+     height: 100%;
+   }
+
+   /* Set black background color, white text and some padding */
+   /* On small screens, set height to 'auto' for sidenav and grid */
+   @media screen and (max-width: 767px) {
+     .sidenav {
+       height: auto;
+       padding: 15px;
+     }
+     .row.content {height:auto;}
+   }
+.align{
+text-align:center;
+
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+}
+.App-logo2 {
+  animation: App-logo-spin infinite 20s linear;
+  height: 20vmin;
+  pointer-events: none;
+  float: right;
 }
 
 .App-header {
