@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import fire from './fire';
 import './App.css';
-import logo from './logo.png';
+import logo from './test.png';
 
 class App extends Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class App extends Component {
           <div>
           <br />
             <label>  Estimated Time: </label>
-            <input type="text" id="Estimated-input"/>
+            <input type="text" placeholer = "tesnbhbt" required id="Estimated-input"/>
           </div>
           <div>
           <br />

@@ -2,7 +2,7 @@
   text-align: center;
 }
 .test{
-  background-color: gray;
+  background-color: #eee;
   height: auto;
   width: 40%;
   margin-left: auto;
@@ -11,7 +11,7 @@
 
 }
 .back{
-  background-color: silver;
+  background-color: #eee;
 
 
 }
@@ -44,12 +44,12 @@ text-align:center;
 
 }
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 3s linear;
   height: 20vmin;
   pointer-events: none;
 }
 .App-logo2 {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 3s linear;
   height: 20vmin;
   pointer-events: none;
   float: right;
