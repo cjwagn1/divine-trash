@@ -83,7 +83,7 @@ class App extends Component {
                     autoComplete="off"
                   />
                   <label className="mdl-textfield__label" for="sample3">
-                    Location
+                    Location()
                   </label>
                 </div>
                 <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
