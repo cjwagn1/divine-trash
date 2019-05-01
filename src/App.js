@@ -118,14 +118,20 @@ class App extends Component {
               </div>
             </div>
           </form>
-          <ul>
-            {this.state.posts.map(post => (
-              <li key={post.id}>
-                {post.text.title}, {post.text.location}, {post.text.time},{" "}
-                {post.text.noteField}
-              </li>
-            ))}
-          </ul>
+
+          {this.state.posts.map(post => (
+            <div
+              key={post.id}
+              className="demo-card-wide mdl-card mdl-shadow--2dp"
+            >
+              <div className="mdl-card__title">
+                <h2 className="mdl-card__title-text">{post.text.title}</h2>
+              </div>
+              <div className="mdl-card__supporting-text">
+                {post.text.location}, {post.text.time}, {post.text.noteField}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     );

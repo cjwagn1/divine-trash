@@ -2,15 +2,19 @@
   text-align: center;
 }
 .main {
-  background-color: #e8e8e8;
+  background-color: #fafafa;
   height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #767777;
+}
+.main div {
+  margin-bottom: 15px;
 }
 .back {
-  background-color: #e8e8e8;
+  background-color: #fafafa;
 }
 .navbar {
   margin-bottom: 0;
